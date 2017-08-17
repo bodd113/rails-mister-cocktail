@@ -8,6 +8,17 @@
   </li>
   <% end %>
 </ul>
+
+<%= simple_form_for [@cocktail, @dose] do |q| %>
+<label for="name">Description:</label>
+<%= q.text_area :description %>
+</br>
+<%= q.association :ingredient %>
+<%= q.submit %>
+<% end %>
+
+
+
 <p> <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%> </p>
 <p> <%= link_to "Cocktails", cocktails_path, class: "btn btn-primary"%> </p>
 
