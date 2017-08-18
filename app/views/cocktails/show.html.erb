@@ -1,4 +1,5 @@
 <h2><%= @cocktail.name %></h2>
+<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
 <ul>
 <% @cocktail.doses.each do |d| %>
   <li><%= d.description %>
@@ -19,7 +20,7 @@
 
 
 
-<!-- <p> <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%> </p> -->
+
 </br>
 <p> <%= link_to "Cocktails", cocktails_path, class: "btn btn-primary"%> </p>
 

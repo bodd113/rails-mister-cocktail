@@ -38,6 +38,10 @@ gem "font-awesome-sass"
 gem "simple_form"
 gem "autoprefixer-rails"
 
+gem "cloudinary"
+
+gem 'carrierwave', '~> 0.11.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
