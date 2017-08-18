@@ -1,7 +1,7 @@
 <%= simple_form_for @cocktail do |c| %>
   <label for="name">Name:</label>
   <%= c.text_field :name %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= c.input :photo %>
+  <%= c.input :photo_cache, as: :hidden %>
   <%= c.submit %>
 <% end %>
