@@ -21,6 +21,22 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def edit
+    @cocktail = Cocktail.find(params[:id])
+  end
+
+  def update
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.update(cocktail_params)
+    redirect_to cocktail_path(@cocktail)
+  end
+
+  def destory
+    cocktail_to_delete = Cocktail.find(params[:id])
+    cocktail_to_delete.destroy
+    redirect_to cocktails_path
+  end
+
   private
   def cocktail_params
     params.require(:cocktail).permit(:name, :photo, :photo_cache)

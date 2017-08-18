@@ -20,6 +20,8 @@
 
 
 </br>
-<p> <%= link_to "Cocktails", cocktails_path, class: "btn btn-default" %> </p>
+<%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, class: "btn btn-default" %>
+<%= link_to "Update Cocktail", edit_cocktail_path(@cocktail), class: "btn btn-default" %>
+
 
 
