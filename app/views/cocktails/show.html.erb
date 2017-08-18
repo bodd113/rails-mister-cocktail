@@ -14,12 +14,13 @@
 <%= q.text_area :description %>
 </br>
 <%= q.association :ingredient %>
-<%= q.submit %>
+<%= q.submit "Add Ingredient" %>
 <% end %>
 
 
 
-<p> <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%> </p>
+<!-- <p> <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%> </p> -->
+</br>
 <p> <%= link_to "Cocktails", cocktails_path, class: "btn btn-primary"%> </p>
 
 
