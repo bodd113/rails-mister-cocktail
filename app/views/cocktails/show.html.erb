@@ -12,9 +12,10 @@
 
 <%= simple_form_for [@cocktail, @dose] do |q| %>
 <label for="name">Description:</label>
-<%= q.text_area :description %>
+<%= q.text_area :description, label: false  %>
 </br>
-<%= q.association :ingredient %>
+<label for="name">Ingredient:</label>
+<%= q.association :ingredient, label: false, wrapper:false %>
 <%= q.submit "Add Ingredient" %>
 <% end %>
 
